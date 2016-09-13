@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Description
+        </ion-title>
+        <ion-buttons start>
+            <button (click)="dismiss()">
+        <span primary showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+    <ion-list>
+        <ion-item *ngIf="myOrderForm">
+            <h2>{{myOrderForm.frameworkContractNumber}}</h2>
+            <p>{{myOrderForm.requestIdentifier}}</p>
+        </ion-item>
+
+        <!--<ion-item *ngFor="let item of character['items']">
+        {{item.title}}
+        <ion-note item-right>
+          {{item.note}}
+        </ion-note>
+      </ion-item>-->
+    </ion-list>
+</ion-content>

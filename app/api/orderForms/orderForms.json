@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "client": "CdT",
+        "costOfBdc": 150.6,
+        "externalProvider": "Jose Contreras",
+        "frameworkContractNumber": "6000044",
+        "nameOfExternalVendor": "ext",
+        "requestIdentifier": "2016/000001"
+    },
+    {
+        "id": 2,
+        "client": "ACER",
+        "costOfBdc": 80.4,
+        "externalProvider": "Jose Contreras",
+        "frameworkContractNumber": "6000014",
+        "nameOfExternalVendor": "ext",
+        "requestIdentifier": "2016/000002"
+    },
+    {
+        "id": 3,
+        "client": "OHMI",
+        "costOfBdc": 95.4,
+        "externalProvider": "Jose Contreras",
+        "frameworkContractNumber": "6000012",
+        "nameOfExternalVendor": "ext",
+        "requestIdentifier": "2016/000003"
+    }
+]

@@ -1,0 +1,49 @@
+{
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "@angular/http": "2.0.0-rc.4",
+    "@angular/forms": "0.2.0",    
+    "es6-module-loader": "^0.17.11",
+    "es6-shim": "^0.35.0",
+    "systemjs": "^0.19.25",
+    "ionic-angular": "2.0.0-beta.11",
+    "ionic-native": "1.3.21",
+    "ionicons": "3.0.0",
+    "mapbox.js": "^2.4.0",
+    "moment": "^2.13.0",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+     "del": "2.2.2",
+    "gulp": "3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-inline-ng2-template": "^3.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.5",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "4.3.9",
+    "ionic-gulp-fonts-copy": "^1.0.0",
+    "ionic-gulp-sass-build": "^1.0.0",
+    "run-sequence": "1.2.2",
+    "systemjs-builder": "^0.15.14",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  },
+  "name": "orderforms",
+  "description": "orderForms: An Ionic project",
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": []
+}
