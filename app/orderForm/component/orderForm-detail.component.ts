@@ -12,18 +12,18 @@ export class OrderFormDetailComponent implements OnInit {
     myOrderForm: IOrderForm;
     errorMessage: string;
 
-    constructor(private _navParams: NavParams, public viewCtrl: ViewController, private _orderFormService: OrderFormService) {
-
-    }
+    constructor(private _navParams: NavParams, 
+                private _viewCtrl: ViewController,
+                private _orderFormService: OrderFormService) { }
 
     ngOnInit(): void {
-        this._orderFormService.getOrderForm(+this.navParams.get('id')).subscribe(
+        this._orderFormService.getOrderForm(+this._navParams.get('id')).subscribe(
             orderForm => this.myOrderForm = orderForm,
             error => this.errorMessage = <any>error
         );
     }
 
     dismiss() {
-        this.viewCtrl.dismiss();
+        this._viewCtrl.dismiss();
     }
 }

@@ -23,13 +23,18 @@ var LoginComponent = (function () {
     LoginComponent.prototype.login = function () {
         var _this = this;
         this._loginService.login(this.username, this.password).subscribe(function (data) {
-            //Navigate to home page              
-            _this._navController.setRoot(orderForm_list_component_1.OrderFormListComponent);
+            if (data) {
+                //Navigate to home page                             
+                _this._navController.setRoot(orderForm_list_component_1.OrderFormListComponent);
+            }
+            else {
+                _this.errorMessage = 'username or password is not correct';
+            }
         });
     };
     LoginComponent = __decorate([
         core_1.Component({
-            template: "<ion-list>    <ion-item>     <ion-label floating>Username</ion-label>     <ion-input [(ngModel)]=\"username\" type=\"text\" value=\"\"></ion-input>   </ion-item>    <ion-item>     <ion-label floating>Password</ion-label>     <ion-input [(ngModel)]=\"password\"  type=\"password\" value=\"\"></ion-input>   </ion-item>  </ion-list>  <div padding>   <button primary block  (click)=\"login()\">Sign In</button> </div>",
+            template: "<ion-list>    <ion-item>     <ion-label floating>Username</ion-label>     <ion-input [(ngModel)]=\"username\" type=\"text\" value=\"\"></ion-input>   </ion-item>    <ion-item>     <ion-label floating>Password</ion-label>     <ion-input [(ngModel)]=\"password\"  type=\"password\" value=\"\"></ion-input>   </ion-item>  </ion-list>  <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>  <div padding>   <button primary block  (click)=\"login()\">Sign In</button> </div>",
             providers: [login_service_1.LoginService]
         }), 
         __metadata('design:paramtypes', [login_service_1.LoginService, ionic_angular_1.NavController, ionic_angular_1.Platform, http_1.Http])

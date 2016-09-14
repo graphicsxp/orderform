@@ -13,17 +13,17 @@ var ionic_angular_1 = require('ionic-angular');
 var orderForm_service_1 = require('../service/orderForm-service');
 var loading_service_1 = require('../../shared/service/loading-service');
 var OrderFormDetailComponent = (function () {
-    function OrderFormDetailComponent(_navParams, viewCtrl, _orderFormService) {
+    function OrderFormDetailComponent(_navParams, _viewCtrl, _orderFormService) {
         this._navParams = _navParams;
-        this.viewCtrl = viewCtrl;
+        this._viewCtrl = _viewCtrl;
         this._orderFormService = _orderFormService;
     }
     OrderFormDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this._orderFormService.getOrderForm(+this.navParams.get('id')).subscribe(function (orderForm) { return _this.myOrderForm = orderForm; }, function (error) { return _this.errorMessage = error; });
+        this._orderFormService.getOrderForm(+this._navParams.get('id')).subscribe(function (orderForm) { return _this.myOrderForm = orderForm; }, function (error) { return _this.errorMessage = error; });
     };
     OrderFormDetailComponent.prototype.dismiss = function () {
-        this.viewCtrl.dismiss();
+        this._viewCtrl.dismiss();
     };
     OrderFormDetailComponent = __decorate([
         core_1.Component({

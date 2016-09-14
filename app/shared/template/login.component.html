@@ -12,6 +12,8 @@
 
 </ion-list>
 
+<div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
 <div padding>
   <button primary block  (click)="login()">Sign In</button>
 </div>

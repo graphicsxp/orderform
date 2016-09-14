@@ -11,15 +11,20 @@ import { OrderFormListComponent } from '../../orderForm/component/orderForm-list
 export class LoginComponent {
     username: string;
     password: string;
+    errorMessage: string;
 
     constructor(private _loginService: LoginService, private _navController: NavController, private _platform: Platform, private http: Http) { }
 
     login() {
         this._loginService.login(this.username, this.password).subscribe(
-             data => {      
-               //Navigate to home page              
-                this._navController.setRoot(OrderFormListComponent);
-             }
-          )
-       }
+            data => {
+                if (data) {
+                    //Navigate to home page                             
+                    this._navController.setRoot(OrderFormListComponent);
+                } else {
+                    this.errorMessage = 'username or password is not correct';
+                }
+            }
+        )
+    }
 }
