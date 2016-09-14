@@ -1,4 +1,4 @@
-import { IOrderForm } from './orderForms';
+import { IOrderForm } from './orderForm-model';
 import { Component, OnInit } from  '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { OrderFormService } from './orderForm-service';
