@@ -1,12 +1,23 @@
 import { Component, ViewChild } from '@angular/core';
 import { ionicBootstrap, Platform, Nav } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
+//import {provideCloud, CloudSettings} from '@ionic/cloud-angular';
+
+
 import 'rxjs/Rx'; // load all features of reactive extensions
+
 
 
 import { OrderFormListComponent } from './orderForm/component/orderForm-list.component';
 import { OrderFormService } from './orderForm/service/orderForm-service';
 import { LoginComponent } from './shared/component/login.component';
+
+
+// const cloudSettings: CloudSettings = {
+//   'core': {
+//     'app_id': 'APP_ID'
+//   }
+// };
 
 
 @Component({
@@ -18,14 +29,14 @@ class MyApp {
 
   rootPage: any = LoginComponent;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Login', component: LoginComponent },      
+      { title: 'Login', component: LoginComponent },
       { title: 'Order Forms', component: OrderFormListComponent }
     ];
 
@@ -46,4 +57,4 @@ class MyApp {
   }
 }
 
-ionicBootstrap(MyApp);
+ionicBootstrap(MyApp ,/*[provideCloud(cloudSettings)]/*);

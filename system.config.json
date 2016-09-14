@@ -17,7 +17,10 @@
         "@angular/platform-browser": "./node_modules/@angular/platform-browser/index.js",
         "@angular/platform-browser-dynamic": "./node_modules/@angular/platform-browser-dynamic/index.js",
         "ionic-angular": "./node_modules/ionic-angular/index.js",
-        "ionic-native": "./node_modules/ionic-native/dist/index.js"
+        "ionic-native": "./node_modules/ionic-native/dist/index.js",
+        "@ionic/cloud": "./node_modules/@ionic/cloud/dist/bundle/ionic.cloud.js",
+        "@ionic/cloud-angular": "./node_modules/@ionic/cloud-angular/dist/es5/index.js",
+        "lodash": "./node_modules/lodash/lodash.js"        
     },
     "defaultJSExtensions": true
 }

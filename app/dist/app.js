@@ -11,9 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var ionic_angular_1 = require('ionic-angular');
 var ionic_native_1 = require('ionic-native');
+//import {provideCloud, CloudSettings} from '@ionic/cloud-angular';
 require('rxjs/Rx'); // load all features of reactive extensions
 var orderForm_list_component_1 = require('./orderForm/component/orderForm-list.component');
 var login_component_1 = require('./shared/component/login.component');
+// const cloudSettings: CloudSettings = {
+//   'core': {
+//     'app_id': 'APP_ID'
+//   }
+// };
 var MyApp = (function () {
     function MyApp(platform) {
         this.platform = platform;
@@ -49,4 +55,4 @@ var MyApp = (function () {
     ], MyApp);
     return MyApp;
 }());
-ionic_angular_1.ionicBootstrap(MyApp);
+ionic_angular_1.ionicBootstrap(MyApp, [provideCloud(cloudSettings)]);
