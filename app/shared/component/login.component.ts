@@ -8,7 +8,7 @@ import { OrderFormListComponent } from '../../orderForm/component/orderForm-list
     templateUrl: '../template/login.component.html',
     providers: [LoginService]
 })
-export class LoginPage {
+export class LoginComponent {
     username: string;
     password: string;
 

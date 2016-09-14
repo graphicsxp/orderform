@@ -12,7 +12,7 @@ export class OrderFormDetailComponent implements OnInit {
     myOrderForm: IOrderForm;
     errorMessage: string;
 
-    constructor(public nav: NavController, public navParams: NavParams, public viewCtrl: ViewController, private _orderFormService: OrderFormService) {
+    constructor(private _navParams: NavParams, public viewCtrl: ViewController, private _orderFormService: OrderFormService) {
 
     }
 

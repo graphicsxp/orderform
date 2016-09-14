@@ -13,27 +13,27 @@ var http_1 = require('@angular/http');
 var core_1 = require('@angular/core');
 var login_service_1 = require('../service/login-service');
 var orderForm_list_component_1 = require('../../orderForm/component/orderForm-list.component');
-var LoginPage = (function () {
-    function LoginPage(_loginService, _navController, _platform, http) {
+var LoginComponent = (function () {
+    function LoginComponent(_loginService, _navController, _platform, http) {
         this._loginService = _loginService;
         this._navController = _navController;
         this._platform = _platform;
         this.http = http;
     }
-    LoginPage.prototype.login = function () {
+    LoginComponent.prototype.login = function () {
         var _this = this;
         this._loginService.login(this.username, this.password).subscribe(function (data) {
             //Navigate to home page              
             _this._navController.setRoot(orderForm_list_component_1.OrderFormListComponent);
         });
     };
-    LoginPage = __decorate([
+    LoginComponent = __decorate([
         core_1.Component({
             template: "<ion-list>    <ion-item>     <ion-label floating>Username</ion-label>     <ion-input [(ngModel)]=\"username\" type=\"text\" value=\"\"></ion-input>   </ion-item>    <ion-item>     <ion-label floating>Password</ion-label>     <ion-input [(ngModel)]=\"password\"  type=\"password\" value=\"\"></ion-input>   </ion-item>  </ion-list>  <div padding>   <button primary block  (click)=\"login()\">Sign In</button> </div>",
             providers: [login_service_1.LoginService]
         }), 
         __metadata('design:paramtypes', [login_service_1.LoginService, ionic_angular_1.NavController, ionic_angular_1.Platform, http_1.Http])
-    ], LoginPage);
-    return LoginPage;
+    ], LoginComponent);
+    return LoginComponent;
 }());
-exports.LoginPage = LoginPage;
+exports.LoginComponent = LoginComponent;

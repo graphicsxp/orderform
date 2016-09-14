@@ -13,15 +13,15 @@ var ionic_angular_1 = require('ionic-angular');
 var ionic_native_1 = require('ionic-native');
 require('rxjs/Rx'); // load all features of reactive extensions
 var orderForm_list_component_1 = require('./orderForm/component/orderForm-list.component');
-var page2_1 = require('./pages/page2/page2');
+var login_component_1 = require('./shared/component/login.component');
 var MyApp = (function () {
     function MyApp(platform) {
         this.platform = platform;
-        this.rootPage = orderForm_list_component_1.OrderFormListComponent;
+        this.rootPage = login_component_1.LoginComponent;
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
-            { title: 'Login', component: page2_1.Page2 },
+            { title: 'Login', component: login_component_1.LoginComponent },
             { title: 'Order Forms', component: orderForm_list_component_1.OrderFormListComponent }
         ];
     }

@@ -6,7 +6,7 @@ import 'rxjs/Rx'; // load all features of reactive extensions
 
 import { OrderFormListComponent } from './orderForm/component/orderForm-list.component';
 import { OrderFormService } from './orderForm/service/orderForm-service';
-import { Page2 } from './pages/page2/page2';
+import { LoginComponent } from './shared/component/login.component';
 
 
 @Component({
@@ -16,7 +16,7 @@ import { Page2 } from './pages/page2/page2';
 class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = OrderFormListComponent;
+  rootPage: any = LoginComponent;
 
   pages: Array<{title: string, component: any}>;
 
@@ -25,7 +25,7 @@ class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Login', component: Page2 },      
+      { title: 'Login', component: LoginComponent },      
       { title: 'Order Forms', component: OrderFormListComponent }
     ];
 
