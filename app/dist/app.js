@@ -55,4 +55,4 @@ var MyApp = (function () {
     ], MyApp);
     return MyApp;
 }());
-ionic_angular_1.ionicBootstrap(MyApp, [provideCloud(cloudSettings)]);
+ionic_angular_1.ionicBootstrap(MyApp);

@@ -57,4 +57,4 @@ class MyApp {
   }
 }
 
-ionicBootstrap(MyApp ,/*[provideCloud(cloudSettings)]/*);
+ionicBootstrap(MyApp /*,[provideCloud(cloudSettings)]*/);
