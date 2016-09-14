@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http'
 import { Observable } from  'rxjs/Observable'
-import { IUser } from './user-model'
+import { IUser } from '../model/user-model'
 
 @Injectable()
 export class LoginService {
@@ -18,6 +18,11 @@ export class LoginService {
     getUser(id: number): Observable<IUser>{
         return this.getUsers()
             .map((users: IUser[]) => users.find(p => p.id === id));
+    }
+
+    login(username: string, password: string): Observable<IUser>{
+        return this.getUsers()
+            .map((users: IUser[]) => users.find(p => p.username === username && p.password === password));
     }
 
     private handleError(error: Response) {

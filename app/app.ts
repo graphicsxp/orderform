@@ -4,8 +4,8 @@ import { StatusBar } from 'ionic-native';
 import 'rxjs/Rx'; // load all features of reactive extensions
 
 
-import { OrderFormListComponent } from './orderForm/orderForm-list.component';
-import { OrderFormService } from './orderForm/orderForm-service';
+import { OrderFormListComponent } from './orderForm/component/orderForm-list.component';
+import { OrderFormService } from './orderForm/service/orderForm-service';
 import { Page2 } from './pages/page2/page2';
 
 

@@ -14,4 +14,4 @@ module.exports = function (gulp) {
             }))
             .pipe(gulp.dest('app/dist'));
     });
-}
+};

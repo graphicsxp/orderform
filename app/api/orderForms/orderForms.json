@@ -6,7 +6,8 @@
         "externalProvider": "Jose Contreras",
         "frameworkContractNumber": "6000044",
         "nameOfExternalVendor": "ext",
-        "requestIdentifier": "2016/000001"
+        "requestIdentifier": "2016/000001",
+        "signatureDate": "2016-09-12T09:43:02.000"
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "externalProvider": "Jose Contreras",
         "frameworkContractNumber": "6000014",
         "nameOfExternalVendor": "ext",
-        "requestIdentifier": "2016/000002"
+        "requestIdentifier": "2016/000002",
+        "signatureDate": "2016-09-11T10:31:02.000"        
     },
     {
         "id": 3,
@@ -24,6 +26,7 @@
         "externalProvider": "Jose Contreras",
         "frameworkContractNumber": "6000012",
         "nameOfExternalVendor": "ext",
-        "requestIdentifier": "2016/000003"
+        "requestIdentifier": "2016/000003",
+        "signatureDate": "2016-07-12T08:26:02.000"        
     }
 ]

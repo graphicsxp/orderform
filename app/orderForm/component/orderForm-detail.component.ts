@@ -1,10 +1,10 @@
-import { IOrderForm } from './orderForm-model';
+import { IOrderForm } from '../model/orderForm-model';
 import { Component, OnInit } from  '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
-import { OrderFormService } from './orderForm-service';
+import { OrderFormService } from '../service/orderForm-service';
 
 @Component({
-    templateUrl: './orderForm-detail.component.html',
+    templateUrl: '../template/orderForm-detail.component.html',
     providers: [OrderFormService]
 })
 export class OrderFormDetailComponent implements OnInit {

@@ -3,4 +3,6 @@ export interface IUser {
     fullName: string;
     firstName: string;
     lastName: string;
+    username: string;
+    password: string;
 }

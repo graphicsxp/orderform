@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            Description
+            Order form details
         </ion-title>
         <ion-buttons start>
             <button (click)="dismiss()">
@@ -16,17 +16,17 @@
 
     <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
 
-    <ion-list>
-        <ion-item *ngIf="myOrderForm">
-            <h2>{{myOrderForm.frameworkContractNumber}}</h2>
+    <ion-card *ngIf="myOrderForm">
+        <ion-item class="item item-divider item-energized">
+            
+            <h2>Order form #{{myOrderForm.frameworkContractNumber}}</h2>
+        </ion-item>
+        <ion-item>
             <p>{{myOrderForm.requestIdentifier}}</p>
         </ion-item>
+        <ion-item offset-40 class="item item-divider">
+            <h3>signed on {{myOrderForm.signatureDate | date:'d/M/yyyy'}} at {{myOrderForm.signatureDate | date:'shortTime'}}</h3>
+        </ion-item>
 
-        <!--<ion-item *ngFor="let item of character['items']">
-        {{item.title}}
-        <ion-note item-right>
-          {{item.note}}
-        </ion-note>
-      </ion-item>-->
-    </ion-list>
+    </ion-card>
 </ion-content>

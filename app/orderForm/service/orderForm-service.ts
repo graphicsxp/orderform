@@ -1,16 +1,23 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Http, Response } from '@angular/http'
 import { Observable } from  'rxjs/Observable'
-import { IOrderForm } from './orderforms'
+import { IOrderForm } from '../model/orderform-model'
+import { LoadingService } from '../../shared/service/loading-service';
 
 @Injectable()
 export class OrderFormService {
     private _orderFormUrl = './build/app/api/orderforms/orderforms.json';
-    constructor(private _http: Http) { } 
+    private _loadingService: LoadingService;
+    
+    constructor(private _http: Http,  @Inject(LoadingService) loadingService: LoadingService) { 
+        this._loadingService  = loadingService;
+    } 
 
     getOrderForms(): Observable<IOrderForm[]> {
+        this._loadingService.presentLoading();
         return this._http.get(this._orderFormUrl) 
             .map((response: Response) => <IOrderForm[]>response.json())
+           // .finally(() => this._loadingService.hideLoading())
             .do(data => console.log("All: " + JSON.stringify(data)))
             .catch(this.handleError);
     }

@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var ionic_angular_1 = require('ionic-angular');
 var ionic_native_1 = require('ionic-native');
 require('rxjs/Rx'); // load all features of reactive extensions
-var orderForm_list_component_1 = require('./orderForm/orderForm-list.component');
+var orderForm_list_component_1 = require('./orderForm/component/orderForm-list.component');
 var page2_1 = require('./pages/page2/page2');
 var MyApp = (function () {
     function MyApp(platform) {
