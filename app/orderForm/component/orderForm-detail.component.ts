@@ -2,10 +2,11 @@ import { IOrderForm } from '../model/orderForm-model';
 import { Component, OnInit } from  '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { OrderFormService } from '../service/orderForm-service';
+import { LoadingService } from '../../shared/service/loading-service';
 
 @Component({
     templateUrl: '../template/orderForm-detail.component.html',
-    providers: [OrderFormService]
+    providers: [OrderFormService, LoadingService]
 })
 export class OrderFormDetailComponent implements OnInit {
     myOrderForm: IOrderForm;

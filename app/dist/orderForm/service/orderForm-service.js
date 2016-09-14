@@ -22,9 +22,11 @@ var OrderFormService = (function () {
         this._loadingService = loadingService;
     }
     OrderFormService.prototype.getOrderForms = function () {
+        var _this = this;
         this._loadingService.presentLoading();
         return this._http.get(this._orderFormUrl)
             .map(function (response) { return response.json(); })
+            .finally(function () { return _this._loadingService.hideLoading(); })
             .do(function (data) { return console.log("All: " + JSON.stringify(data)); })
             .catch(this.handleError);
     };

@@ -18,7 +18,8 @@ export class OrderFormListComponent
     errorMessage: string;
 
     constructor(private _orderFormService: OrderFormService, 
-                private _modalCtrl: ModalController) { }
+                private _modalCtrl: ModalController,
+                private _navCtrl: NavController) { }
 
     ngOnInit(): void {
         this._orderFormService.getOrderForms()
@@ -29,8 +30,8 @@ export class OrderFormListComponent
     }
 
     itemSelected(item: IOrderForm): void {        
-        // this.navCtrl.push(OrderFormDetailComponent, {myOrderForm: item})
-        let modal = this._modalCtrl.create(OrderFormDetailComponent, item);
-        modal.present();
+        this._navCtrl.push(OrderFormDetailComponent, {id: item.id})
+        //let modal = this._modalCtrl.create(OrderFormDetailComponent, item);
+        //modal.present();
     }
 }

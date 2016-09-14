@@ -14,9 +14,10 @@ var orderForm_detail_component_1 = require('./orderForm-detail.component');
 var orderForm_service_1 = require('../service/orderForm-service');
 var loading_service_1 = require('../../shared/service/loading-service');
 var OrderFormListComponent = (function () {
-    function OrderFormListComponent(_orderFormService, _modalCtrl) {
+    function OrderFormListComponent(_orderFormService, _modalCtrl, _navCtrl) {
         this._orderFormService = _orderFormService;
         this._modalCtrl = _modalCtrl;
+        this._navCtrl = _navCtrl;
         this.orderForms = [];
     }
     OrderFormListComponent.prototype.ngOnInit = function () {
@@ -25,16 +26,16 @@ var OrderFormListComponent = (function () {
             .subscribe(function (orderForms) { return _this.orderForms = orderForms; }, function (error) { return _this.errorMessage = error; });
     };
     OrderFormListComponent.prototype.itemSelected = function (item) {
-        // this.navCtrl.push(OrderFormDetailComponent, {myOrderForm: item})
-        var modal = this._modalCtrl.create(orderForm_detail_component_1.OrderFormDetailComponent, item);
-        modal.present();
+        this._navCtrl.push(orderForm_detail_component_1.OrderFormDetailComponent, { id: item.id });
+        //let modal = this._modalCtrl.create(OrderFormDetailComponent, item);
+        //modal.present();
     };
     OrderFormListComponent = __decorate([
         core_1.Component({
             template: "<ion-header>     <ion-navbar>         <button menuToggle>       <ion-icon name=\"menu\"></ion-icon>     </button>         <ion-title>Order Forms</ion-title>     </ion-navbar> </ion-header>  <div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>  <ion-content padding class=\"grid-basic-page\">      <ion-card *ngIf='orderForms'>         <ion-card-header>             {{orderForms.length }} order forms were found.         </ion-card-header>          <ion-list>             <ion-item *ngFor=\"let orderForm of orderForms\" (click)=\"itemSelected(orderForm)\" class=\"item item-icon-right\">                 <ion-row>                     <ion-col width-30>                         <p>{{orderForm.signatureDate | date:'d/M/yyyy'}}</p>                         <p>{{orderForm.signatureDate | date:'shortTime'}}</p>                     </ion-col>                     <ion-col width-30 center>                         <h3>{{orderForm.frameworkContractNumber}}</h3>                         <p> (request : {{orderForm.requestIdentifier}}) </p>                     </ion-col>                     <ion-col>                     </ion-col>                     <ion-col>                         <ion-icon name=\"paper\"></ion-icon>                     </ion-col>                 </ion-row>                 <i class=\"icon ion-chevron-right icon-accessory\"></i>             </ion-item>         </ion-list>     </ion-card> </ion-content>",
             providers: [orderForm_service_1.OrderFormService, loading_service_1.LoadingService]
         }), 
-        __metadata('design:paramtypes', [orderForm_service_1.OrderFormService, ionic_angular_1.ModalController])
+        __metadata('design:paramtypes', [orderForm_service_1.OrderFormService, ionic_angular_1.ModalController, ionic_angular_1.NavController])
     ], OrderFormListComponent);
     return OrderFormListComponent;
 }());

@@ -17,7 +17,7 @@ export class OrderFormService {
         this._loadingService.presentLoading();
         return this._http.get(this._orderFormUrl) 
             .map((response: Response) => <IOrderForm[]>response.json())
-           // .finally(() => this._loadingService.hideLoading())
+            .finally(() => this._loadingService.hideLoading())
             .do(data => console.log("All: " + JSON.stringify(data)))
             .catch(this.handleError);
     }
